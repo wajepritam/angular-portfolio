@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
+
+app-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
