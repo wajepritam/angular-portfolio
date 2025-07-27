@@ -1,39 +1,51 @@
-.hero-section {
+.home-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  color: #fff;
-  text-align: center;
-  padding: 0 20px;
-}
+  min-height: calc(100vh - 120px); // header + footer space
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
 
-.hero-content {
-  animation: fadeIn 1.5s ease-in;
-}
+  .intro-content {
+    flex: 1 1 50%;
+    max-width: 600px;
 
-.headline {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
+    .headline {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
 
-.highlight {
-  color: #ffd54f;
-}
+      .highlight {
+        color: #3f51b5; // Angular Material primary color
+      }
+    }
 
-.subhead {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
 
-.cta-btn {
-  padding: 12px 30px;
-  font-size: 1rem;
-}
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      color: #444;
+    }
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+    .cta-buttons a {
+      margin-right: 1rem;
+    }
+  }
+
+  .hero-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
