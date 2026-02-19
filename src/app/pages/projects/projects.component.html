@@ -1,23 +1,20 @@
-<section class="projects-section" id="projects">
-  <h2 class="section-title">My Projects</h2>
+<section class="projects-wrap">
+  <header class="reveal">
+    <h2>Featured Enterprise Projects</h2>
+    <p>Programs where I owned architecture, execution quality, and measurable business outcomes.</p>
+  </header>
 
   <div class="projects-grid">
-    <mat-card class="project-card" *ngFor="let project of projects">
+    <mat-card class="project-card glass reveal" *ngFor="let project of projects">
       <mat-card-header>
         <mat-card-title>{{ project.title }}</mat-card-title>
-        <mat-card-subtitle>{{ project.subtitle }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ project.stack }}</mat-card-subtitle>
       </mat-card-header>
-
-      <img mat-card-image [src]="project.image" alt="{{ project.title }} image" />
-
       <mat-card-content>
-        <p>{{ project.description }}</p>
+        <ul>
+          <li *ngFor="let point of project.impact">{{ point }}</li>
+        </ul>
       </mat-card-content>
-
-      <mat-card-actions>
-        <a mat-button color="primary" [href]="project.link" target="_blank">View Live</a>
-        <a mat-stroked-button color="accent" [href]="project.repo" target="_blank">GitHub</a>
-      </mat-card-actions>
     </mat-card>
   </div>
 </section>

@@ -1,18 +1,28 @@
-<section class="home-container">
-  <div class="intro-content">
-    <h1 class="headline">Hi, I'm <span class="highlight">Pritam Waje</span></h1>
-    <h2 class="subtitle">Frontend Developer | Angular Enthusiast</h2>
-    <p class="description">
-      I build performant, accessible, and beautifully animated user interfaces using Angular, Angular Material, and modern web tools.
+<section class="hero">
+  <div class="hero-main reveal">
+    <p class="kicker">Senior Angular Developer • 8.5+ Years</p>
+    <h1>Building enterprise apps that feel premium, fast, and secure.</h1>
+    <p class="summary">
+      Assistant Vice President at Citi with a proven track record of leading global frontend initiatives,
+      improving app performance by 30%+, and delivering WCAG-compliant experiences for 5,000+ users.
     </p>
 
-    <div class="cta-buttons">
-      <a mat-raised-button color="primary" href="#projects">View Projects</a>
-      <a mat-stroked-button color="accent" href="#contact">Contact Me</a>
+    <div class="actions">
+      <a mat-raised-button color="primary" routerLink="/projects">View Case Studies</a>
+      <a mat-stroked-button color="accent" routerLink="/contact">Let's Connect</a>
     </div>
   </div>
 
-  <div class="hero-image">
-    <img src="assets/icons/dev.svg" alt="Developer illustration" />
-  </div>
+  <aside class="hero-panel glass reveal">
+    <h3>What I bring</h3>
+    <ul>
+      <li *ngFor="let highlight of highlights">{{ highlight }}</li>
+    </ul>
+  </aside>
+</section>
+
+<section class="impact-grid">
+  <article class="impact-card glass reveal"><h4>8.5+ Years</h4><p>Angular development in enterprise, fintech, and large-scale domains.</p></article>
+  <article class="impact-card glass reveal"><h4>5000+ Users</h4><p>Platforms delivered for global internal stakeholders in regulated workflows.</p></article>
+  <article class="impact-card glass reveal"><h4>30%+ Faster</h4><p>Performance gains via change detection strategy, lazy loading, and RxJS patterns.</p></article>
 </section>

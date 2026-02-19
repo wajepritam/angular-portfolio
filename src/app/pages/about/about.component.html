@@ -1,1 +1,26 @@
-<p>about works!</p>
+<section class="about-wrap">
+  <article class="glass summary-card reveal">
+    <h2>Professional Summary</h2>
+    <p>
+      Senior Angular Developer with 8.5+ years of experience delivering secure, scalable enterprise applications across
+      banking and high-compliance environments. Specialized in Angular (2+), TypeScript, RxJS, accessibility, and
+      component-driven architecture.
+    </p>
+  </article>
+
+  <article class="glass timeline reveal" *ngFor="let item of experience">
+    <header>
+      <h3>{{ item.role }}</h3>
+      <p>{{ item.company }}</p>
+      <small>{{ item.duration }}</small>
+    </header>
+    <ul>
+      <li *ngFor="let point of item.points">{{ point }}</li>
+    </ul>
+  </article>
+
+  <article class="glass edu reveal">
+    <h3>Education</h3>
+    <p>B.E. in Computer Engineering — Pune University (2015–2018)</p>
+  </article>
+</section>
