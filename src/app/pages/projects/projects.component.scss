@@ -12,6 +12,7 @@
 .project-card {
   color: var(--text);
   transition: transform .25s ease;
+  background: var(--surface) !important;
 
   &:hover { transform: translateY(-6px); }
 
