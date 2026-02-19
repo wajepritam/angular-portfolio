@@ -1,0 +1,16 @@
+.panel {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 75ch;
+  }
+}
