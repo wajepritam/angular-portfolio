@@ -1,0 +1,20 @@
+.contact-wrap {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.4rem;
+
+  p {
+    color: var(--muted);
+  }
+}
+
+.contact-grid {
+  display: grid;
+  gap: 0.8rem;
+
+  a {
+    text-decoration: none;
+    color: var(--accent);
+  }
+}
