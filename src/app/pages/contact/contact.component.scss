@@ -1,0 +1,22 @@
+.contact-wrap {
+  padding: 1.4rem;
+
+  p { color: var(--muted); }
+}
+
+.contact-grid {
+  display: grid;
+  gap: .7rem;
+
+  a {
+    text-decoration: none;
+    color: var(--accent);
+    width: fit-content;
+    transition: transform .2s ease, color .2s ease;
+
+    &:hover {
+      color: #7df3e7;
+      transform: translateX(6px);
+    }
+  }
+}

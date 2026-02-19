@@ -1,4 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #070b18;
+  --surface: rgba(15, 23, 42, 0.72);
+  --surface-strong: rgba(15, 23, 42, 0.92);
+  --text: #f5f8ff;
+  --muted: #b6c0e8;
+  --primary: #8b9bff;
+  --accent: #41d7c6;
+  --border: rgba(255, 255, 255, 0.16);
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* { box-sizing: border-box; }
+
+html,
+body { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Inter, 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(circle at 25% 0%, #16264f 0%, var(--bg) 45%);
+}
+
+h1, h2, h3, h4 { letter-spacing: 0.2px; }
+
+a { color: inherit; }
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.reveal {
+  animation: reveal 0.7s ease both;
+}
+
+.reveal:nth-child(2) { animation-delay: 0.12s; }
+.reveal:nth-child(3) { animation-delay: 0.24s; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

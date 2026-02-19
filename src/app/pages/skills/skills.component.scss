@@ -1,0 +1,15 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  padding: 1rem;
+  transition: transform .25s ease;
+
+  &:hover { transform: translateY(-5px); }
+
+  h3 { margin-top: 0; }
+  li { color: var(--muted); line-height: 1.8; }
+}
