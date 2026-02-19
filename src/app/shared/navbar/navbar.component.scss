@@ -1,0 +1,41 @@
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 16, 32, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.brand {
+  font-weight: 700;
+  text-decoration: none;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+
+  a {
+    text-decoration: none;
+    color: var(--muted);
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  a:hover,
+  .active {
+    color: var(--accent);
+  }
+}

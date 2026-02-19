@@ -1,1 +1,20 @@
-<p>about works!</p>
+<section class="panel glass-card fade-up">
+  <h2>Professional Summary</h2>
+  <p>
+    Senior Angular Developer with 8.5+ years of experience delivering scalable, secure, enterprise-grade web
+    applications for global banking and enterprise platforms. Expert in Angular (2+), TypeScript, RxJS,
+    component-driven architecture, performance optimization, and WCAG accessibility.
+  </p>
+
+  <h3>Experience</h3>
+  <article class="experience-card fade-up" *ngFor="let item of experience">
+    <h4>{{ item.role }}</h4>
+    <p class="meta">{{ item.company }} • {{ item.duration }}</p>
+    <ul>
+      <li *ngFor="let point of item.points">{{ point }}</li>
+    </ul>
+  </article>
+
+  <h3>Education</h3>
+  <p class="meta">Bachelor of Engineering in Computer Engineering, Pune University (Aug 2015 – May 2018)</p>
+</section>

@@ -1,0 +1,24 @@
+.contact-wrap {
+  border-radius: 16px;
+  padding: 1.4rem;
+
+  p {
+    color: var(--muted);
+  }
+}
+
+.contact-grid {
+  display: grid;
+  gap: 0.8rem;
+
+  a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      color: #8ef1e8;
+      transform: translateX(4px);
+    }
+  }
+}

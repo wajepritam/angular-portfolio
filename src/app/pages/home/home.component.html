@@ -1,18 +1,28 @@
 <section class="home-container">
-  <div class="intro-content">
-    <h1 class="headline">Hi, I'm <span class="highlight">Pritam Waje</span></h1>
-    <h2 class="subtitle">Frontend Developer | Angular Enthusiast</h2>
+  <div class="intro-content fade-up">
+    <p class="eyebrow">Senior Angular Developer • AVP at Citi</p>
+    <h1>Pritam Sham Waje</h1>
     <p class="description">
-      I build performant, accessible, and beautifully animated user interfaces using Angular, Angular Material, and modern web tools.
+      I build secure, scalable, enterprise-grade Angular applications for global banking and enterprise platforms.
+      My focus is clean architecture, performance optimization, and accessible user experiences.
     </p>
 
     <div class="cta-buttons">
-      <a mat-raised-button color="primary" href="#projects">View Projects</a>
-      <a mat-stroked-button color="accent" href="#contact">Contact Me</a>
+      <a mat-raised-button color="primary" routerLink="/projects">View Key Projects</a>
+      <a mat-stroked-button color="accent" routerLink="/contact">Contact Me</a>
+    </div>
+
+    <div class="stats">
+      <div class="fade-up delay-1"><strong>8.5+</strong><span>Years Experience</span></div>
+      <div class="fade-up delay-2"><strong>5000+</strong><span>Global Users Supported</span></div>
+      <div class="fade-up delay-3"><strong>30%</strong><span>Performance Improvement</span></div>
     </div>
   </div>
 
-  <div class="hero-image">
-    <img src="assets/icons/dev.svg" alt="Developer illustration" />
+  <div class="hero-card glass-card fade-up delay-2">
+    <h3>Professional Highlights</h3>
+    <ul>
+      <li *ngFor="let highlight of highlights">{{ highlight }}</li>
+    </ul>
   </div>
 </section>

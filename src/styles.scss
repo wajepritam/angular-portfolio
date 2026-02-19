@@ -1,4 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #0b1020;
+  --surface: #141b34;
+  --surface-soft: #1d2542;
+  --text: #e8ecff;
+  --muted: #a6b0d7;
+  --primary: #7c8cff;
+  --accent: #42d6c8;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Roboto, 'Helvetica Neue', sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, #202a4e 0%, var(--bg) 45%),
+    linear-gradient(120deg, #0b1020 0%, #111a35 100%);
+  background-size: 200% 200%;
+  color: var(--text);
+  animation: cinematicBackground 18s ease-in-out infinite alternate;
+}
+
+a {
+  color: inherit;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 24px rgba(3, 7, 18, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.85s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.35s; }
+.delay-3 { animation-delay: 0.55s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cinematicBackground {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(66, 214, 200, 0.18); }
+  50% { box-shadow: 0 0 22px rgba(66, 214, 200, 0.34); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

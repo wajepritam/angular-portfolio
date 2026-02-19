@@ -1,1 +1,11 @@
-<p>skills works!</p>
+<section class="fade-up">
+  <h2>Skills & Expertise</h2>
+  <div class="skills-grid">
+    <article class="group glass-card fade-up" *ngFor="let group of skillGroups">
+      <h3>{{ group.category }}</h3>
+      <ul>
+        <li *ngFor="let item of group.items">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</section>

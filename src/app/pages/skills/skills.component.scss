@@ -1,0 +1,26 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.group {
+  border-radius: 14px;
+  padding: 1rem;
+  transition: transform 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+}
