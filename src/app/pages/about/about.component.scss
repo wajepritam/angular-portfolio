@@ -1,0 +1,32 @@
+.panel {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+
+  p,
+  li {
+    color: var(--muted);
+    line-height: 1.8;
+  }
+}
+
+.experience-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.meta {
+  font-size: 0.92rem;
+}
