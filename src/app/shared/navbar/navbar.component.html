@@ -1,10 +1,10 @@
-<header class="nav-wrap">
-  <a class="brand" routerLink="/">Pritam Waje</a>
+<header class="nav-wrap" [class.hidden]="hidden || cinematicMode">
+  <a class="brand" href="#hero">Pritam Waje</a>
   <nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    <a routerLink="/about" routerLinkActive="active">Summary</a>
-    <a routerLink="/projects" routerLinkActive="active">Projects</a>
-    <a routerLink="/skills" routerLinkActive="active">Tech Stack</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>

@@ -1,5 +1,12 @@
+<div class="loader" *ngIf="loading">
+  <div class="logo">PW</div>
+</div>
+
+<div class="grain"></div>
+<div class="cursor" [style.left.px]="cursorX" [style.top.px]="cursorY"></div>
+
 <app-navbar></app-navbar>
-<main class="main-content">
+<main class="main-content" [class.cinematic]="cinematicMode">
   <router-outlet></router-outlet>
 </main>
-<app-footer></app-footer>
+<app-footer *ngIf="!cinematicMode"></app-footer>

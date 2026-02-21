@@ -1,11 +1,5 @@
 :root {
-  --bg: #0b1020;
-  --surface: #141b34;
-  --surface-soft: #1d2542;
-  --text: #e8ecff;
-  --muted: #a6b0d7;
-  --primary: #7c8cff;
-  --accent: #42d6c8;
+  color-scheme: dark;
 }
 
 * {
@@ -14,16 +8,20 @@
 
 html,
 body {
-  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: Inter, Roboto, 'Helvetica Neue', sans-serif;
-  background: radial-gradient(circle at 15% 20%, #202a4e 0%, var(--bg) 45%);
-  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #f4f5ff;
+  background: #030304;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
+button,
+input,
+textarea {
+  font: inherit;
 }
