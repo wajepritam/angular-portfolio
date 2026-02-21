@@ -1,15 +1,15 @@
 .footer {
-  margin: 8px auto 16px;
-  max-width: 1120px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  padding-top: 14px;
+  margin: 0 auto;
+  width: min(1100px, calc(100% - 2rem));
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1rem 0 2rem;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--muted);
+  color: #adb4ce;
   font-size: 0.88rem;
 }
 
@@ -19,5 +19,6 @@
 
   a {
     text-decoration: none;
+    color: inherit;
   }
 }

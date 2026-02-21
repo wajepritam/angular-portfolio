@@ -1,28 +1,101 @@
-<section class="home-container">
-  <div class="intro-content">
-    <p class="eyebrow">Senior Angular Developer • AVP at Citi</p>
-    <h1>Pritam Sham Waje</h1>
-    <p class="description">
-      I build secure, scalable, enterprise-grade Angular applications for global banking and enterprise platforms.
-      My focus is clean architecture, performance optimization, and accessible user experiences.
-    </p>
+<div class="parallax-bg" [style.transform]="'translateY(' + scrollY * 0.2 + 'px)'"></div>
 
-    <div class="cta-buttons">
-      <a mat-raised-button color="primary" routerLink="/projects">View Key Projects</a>
-      <a mat-stroked-button color="accent" routerLink="/contact">Contact Me</a>
-    </div>
+<section
+  id="hero"
+  class="hero"
+  appInView
+  (inViewChange)="heroVisible = $event"
+  [class.visible]="heroVisible"
+>
+  <video
+    #heroVideo
+    *ngIf="!videoFailed"
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="assets/projects/portfolio.png"
+    (error)="videoFailed = true"
+  >
+    <source src="https://cdn.coverr.co/videos/coverr-dark-waves-1579/1080p.mp4" type="video/mp4" />
+  </video>
 
-    <div class="stats">
-      <div><strong>8.5+</strong><span>Years Experience</span></div>
-      <div><strong>5000+</strong><span>Global Users Supported</span></div>
-      <div><strong>30%</strong><span>Performance Improvement</span></div>
+  <img
+    *ngIf="videoFailed"
+    src="assets/projects/portfolio.png"
+    alt="Cinematic fallback"
+    class="hero-video"
+  />
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <p class="title-line">Hi, I'm Pritam Sham Waje</p>
+    <h1>Angular Developer</h1>
+    <p class="tagline">Crafting immersive, high-performance digital stories.</p>
+    <div class="hero-actions">
+      <button (click)="toggleSoundtrack()">{{ isMuted ? 'Unmute Soundtrack' : 'Mute Soundtrack' }}</button>
+      <button class="journey" (click)="startJourney()">Start Journey</button>
+      <button class="cinematic" (click)="toggleCinematicMode()">Cinematic Mode</button>
     </div>
   </div>
+</section>
 
-  <div class="hero-card">
-    <h3>Professional Highlights</h3>
-    <ul>
-      <li *ngFor="let highlight of highlights">{{ highlight }}</li>
-    </ul>
+<section id="about" class="content-section" appInView (inViewChange)="aboutVisible = $event">
+  <div [@sectionReveal]="aboutVisible ? 'in' : 'out'" class="story-card">
+    <h2>About Me</h2>
+    <p>
+      I design frontend experiences like scenes in a film: every interaction intentional, every transition meaningful,
+      every frame polished for scale and speed.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="content-section" appInView (inViewChange)="skillsVisible = $event">
+  <div [@sectionReveal]="skillsVisible ? 'in' : 'out'" class="story-card">
+    <h2>Skills</h2>
+    <div class="skill" *ngFor="let skill of skillSet">
+      <div class="skill-head">
+        <span>{{ skill.name }}</span>
+        <span>{{ skill.level }}%</span>
+      </div>
+      <div class="bar"><span [style.width.%]="skillsVisible ? skill.level : 0"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="content-section" appInView (inViewChange)="projectsVisible = $event">
+  <div [@sectionReveal]="projectsVisible ? 'in' : 'out'" class="story-card projects-grid">
+    <h2>Projects</h2>
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="card-inner">
+        <div class="card-front">{{ project.title }}</div>
+        <div class="card-back">{{ project.summary }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="content-section" appInView (inViewChange)="experienceVisible = $event">
+  <div [@sectionReveal]="experienceVisible ? 'in' : 'out'" class="story-card">
+    <h2>Experience Timeline</h2>
+    <div class="timeline-item" *ngFor="let item of timeline">
+      <span class="period">{{ item.period }}</span>
+      <h3>{{ item.title }} · {{ item.company }}</h3>
+      <p>{{ item.text }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="content-section" appInView (inViewChange)="contactVisible = $event">
+  <div [@sectionReveal]="contactVisible ? 'in' : 'out'" class="story-card glass-form">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="button">Send Message</button>
+    </form>
   </div>
 </section>

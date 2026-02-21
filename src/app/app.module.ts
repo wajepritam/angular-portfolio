@@ -1,4 +1,3 @@
-// src/app/app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,12 +10,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ContactComponent } from './pages/contact/contact.component';
-
-// Angular Material Modules
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
-import {MatCardModule} from '@angular/material/card';
+import { InViewDirective } from './shared/directives/in-view.directive';
+import { MatCardModule } from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,17 +23,11 @@ import {MatCardModule} from '@angular/material/card';
     AboutComponent,
     ProjectsComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    InViewDirective
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatCardModule
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MatCardModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
